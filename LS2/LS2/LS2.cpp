@@ -5,9 +5,7 @@
 
 int main()
 {
-    char b[5] = "Hello"
-
-    //std::cout << "Hello World!\n";
+    std::cout << "Hello World!\n";
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
