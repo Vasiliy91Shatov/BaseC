@@ -1,3 +1,4 @@
+.gitignire
 LS2.sln
 LS2.vcxproj.user
 LS2.vcxproj.filters
@@ -7,3 +8,11 @@ Browse.VC.db-shm
 Browse.VC.db-wal
 Browse.VC.opendb
 LS2.ipch
+.suo
+LS2.exe.recipe
+LS2.ilk
+LS2/x64
+LS2/x64/Debug
+LS2.exe
+LS2.pdb
+
