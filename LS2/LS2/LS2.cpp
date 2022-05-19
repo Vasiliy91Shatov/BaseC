@@ -21,5 +21,12 @@ enum CrossZero : char
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    // Задание 3: Создать массив, способный содержать значения такого перечисления и инициализировать его.
+    CrossZero acell[3][3] = 
+    {   {space, cross, zero},
+        {cross, space, zero},
+        {cross, zero, space}};
+    /*for (int i = 0; i < 3; i++)   // тестирование инициализации
+        std::cout << acell[i][0] << " | " << acell[i][1] << " | " << acell[i][2] << std::endl;*/
+
 }
