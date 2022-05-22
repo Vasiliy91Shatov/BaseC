@@ -24,3 +24,21 @@ LS2/.vs/LS2/FileContentIndex/d6c6d82c-f927-4f79-886a-eae30e418a70.vsidx
 *.opendb
 
 *.ipch
+
+LS3/.vs/LS3/v17/.suo
+
+*.recipe
+
+*.ilk
+
+*.log
+
+*.obj
+
+*.tlog
+
+*.idb
+
+*.pdb
+
+*.exe
