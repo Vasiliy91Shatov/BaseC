@@ -42,3 +42,5 @@ LS3/.vs/LS3/v17/.suo
 *.pdb
 
 *.exe
+
+*.lock
