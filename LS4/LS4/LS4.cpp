@@ -33,4 +33,13 @@ int main()
 		std::cout << "True" << std::endl << std::endl;
 	else
 		std::cout << "False" << std::endl << std::endl;
+
+	// Задание 3:
+
+	std::cout << "Задание 3:" << std::endl << std::endl;
+	int MaxNum = 50;		// Максимальный диапазон
+	std::cout << "Нечетные числа от 1 до " << MaxNum << std::endl;
+	for (int i = 1; i <= MaxNum; i += 2)
+		std::cout << i << ", ";
+	std::cout << std::endl << std::endl;
 }
