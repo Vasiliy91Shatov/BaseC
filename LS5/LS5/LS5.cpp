@@ -25,6 +25,17 @@ bool ArrIntBinCh(int* Arr, int ArrSize)			// Функция замены 1 на 
 	}
 }
 
+	// Задание 3, функция:
+void ArrIntFill(int* Arr, int ArrSize)			// Функция заполнения массива
+{
+	int a = 1;									// Переменная для заполнения массива
+	for (int i = 0; i < ArrSize; i++)			// Заполнение массива согласно задания от 1 с шагом 3
+	{
+		Arr[i] = a;
+		a += 3;
+	}
+}
+
 
 int main()
 {
@@ -35,14 +46,15 @@ int main()
 	double Arr1[Arr1Size] = {1.1};					// Объявление массива
 	for (int i = 1; i < Arr1Size; i++)
 		Arr1[i] = Arr1[i - 1] + 0.2;				// Инициализация массива через цикл
-	std::cout << "Задание 1 :" << std::endl << std::endl;
+	std::cout << "Задание 1 :\n\n";
 	if (ArrDoublePrint(Arr1, Arr1Size))				// Если функция вернула true - массив напечатан
-		std::cout << std::endl << "Массив размером " << Arr1Size << ", корректно напечатан через функцию" << std::endl;
+		std::cout << "\nМассив размером " << Arr1Size << ", корректно напечатан через функцию.\n";
 	else											// Иначе ошибка - пустой массив
-		std::cerr << "Массив пустой" << std::endl;
-	std::cout << std::endl;
+		std::cerr << "Массив пустой\n";
+	std::cout << "\n";
 
 	// Задание 2:
+	std::cout << "Задание 2:\n\n";
 	const int Arr2Size = 11;							// Размер массива для второго задания
 	int Arr2[Arr2Size] = { 1,0,1,0,0,1,1,1,0,1,0 };		// Объявление, инициализация массива
 	std::cout << "Изначальный массив:\n";
@@ -55,5 +67,15 @@ int main()
 		std::cerr << "Массив пустой\n";
 	for (int i = 0; i < Arr2Size; i++)					// Вывод массива после изменения
 		std::cout << Arr2[i] << " ";
+	std::cout << "\n\n";
+
+	// Задание 3:
+	std::cout << "Задание 3:\n\n";
+	const int Arr3Size = 8;								// Размер массива для третьего задания
+	int Arr3[Arr3Size] = {NULL};						// Объявление массива 
+	ArrIntFill(Arr3, Arr3Size);							// Заполнение массива через функцию
+	std::cout << "Заполненниый массив:\n";
+	for (int i = 0; i < Arr3Size; i++)
+		std::cout << Arr3[i] << " ";
 	std::cout << "\n\n";
 }
