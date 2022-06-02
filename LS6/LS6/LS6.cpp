@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <clocale>
-#include <stdlib.h>
+#include <fstream>
+
 
  // Задание 1, функции:
 // Функция заполнения массива значениями 2^n
@@ -43,7 +44,7 @@ void ArrYXIntOut(int** Arr, size_t ArrxSize, size_t ArrySize)		// В функц�
 int main()
 {
 	setlocale(LC_ALL, "Russian");						// Русский язык
-	/*// Зажание 1:
+	// Задание 1:
 	std::cout << "Задание 1 :\n";
 	int* pArr1;											// Указатель на массив
 	size_t Arr1Size = 0;								// Длинна массива
@@ -60,9 +61,9 @@ int main()
 	}
 	else
 		std::cout << "Невозможно создать данный массив\n\n";
-	*/
+	
 	// Задание 2:
-	/*std::cout << "Задание 2:\n";
+	std::cout << "Задание 2:\n";
 
 	int **pArr2;										// Массив указателей на одномерные массивы
 	const size_t Arr2xSize = 4;							// Длинна массива
@@ -78,7 +79,58 @@ int main()
 	for (size_t i = 0; i < Arr2ySize; i++)
 		delete[] pArr2[i];								// Очищаем каждый iтый массив указателей
 	delete[] pArr2;										// Очищаем указатель на массив
-	std::cout << "\n\n";*/
+	std::cout << "\n\n";
 	
 	// Задание 3:
+
+	std::cout << "Задание 3:\n";
+	std::string FileName1, FileName2;					// Объявление переменных дkя имени файла
+	
+	std::cout << "Введите имя первого файла (латиницей) \n";
+	std::cin >> FileName1;								// Ввод имени первого файла 
+	FileName1 = FileName1 + ".txt";						// Добавление расширения
+		
+	std::ofstream fout;									
+	fout.open(FileName1);								// Создание первого файла
+
+	if (fout.is_open())									// Проверка на корректное открытие
+	{
+		fout << "There will come soft rains and the smell of the ground," << "\n";
+		fout << "And swallows circling with their shimmering sound;" << "\n";
+		fout << "And frogs in the pool singing at night," << "\n";
+		fout << "And wild plum trees in tremulous white;" << "\n";
+		fout << "Robins will wear their feathery fire," << "\n";
+		fout << "Whistling their whims on a low fence-wire;" << "\n";
+		fout.close();
+		std::cout << "Файл " << FileName1 << " создан\n";
+	}
+	else
+		std::cerr << "Ошибка создания файла";			
+	
+	std::cout << "Введите имя второго файла (латиницей) \n";
+	
+	do													// Проверка на совпадение имён
+	{
+		std::cin >> FileName2;
+		FileName2 = FileName2 + ".txt";
+		if (FileName1 == FileName2)
+			std::cout << "Имена совпадают, введите другое имя\n";
+	} while (FileName1 == FileName2);
+
+	fout.open(FileName2);								// Создание второго файла
+
+	if (fout.is_open())									// Проверка на корректное открытие
+	{
+		fout << "And not one will know of the war, not one," << "\n";
+		fout << "Will care at last when it is done." << "\n";
+		fout << "Not one would mind, neither bird nor tree," << "\n";
+		fout << "If mankind perished utterly;" << "\n";
+		fout << "And Spring herself when she woke at dawn" << "\n";
+		fout << "Would scarcely know that we were gone." << "\n";
+		fout << "\t" << " Sara Teasdale  1920" << "\n";
+		fout.close();
+		std::cout << "Файл " << FileName2 << " создан";
+	}
+	else
+		std::cerr << "Ошибка создания файла";
 }
