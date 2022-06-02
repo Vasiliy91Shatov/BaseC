@@ -77,14 +77,14 @@ int main()
 	ArrYXIntOut(pArr2, Arr2xSize, Arr2ySize);			// Функция выводящая массив на экран
 
 	for (size_t i = 0; i < Arr2ySize; i++)
-		delete[] pArr2[i];								// Очищаем каждый iтый массив указателей
-	delete[] pArr2;										// Очищаем указатель на массив
+		delete[] pArr2[i];								// Очистка каждого iтого массива указателей
+	delete[] pArr2;										// Очистка указатель на массив
 	std::cout << "\n\n";
 	
 	// Задание 3:
 
 	std::cout << "Задание 3:\n";
-	std::string FileName1, FileName2;					// Объявление переменных дkя имени файла
+	std::string FileName1, FileName2;					// Объявление переменных для имени файла
 	
 	std::cout << "Введите имя первого файла (латиницей) \n";
 	std::cin >> FileName1;								// Ввод имени первого файла 
