@@ -1,5 +1,4 @@
 #include <iostream>
-#include <clocale>
 #define ABS(x) (x = ((x) < 0) ? -(x) : (x));						// Модуль числа
 
 namespace mylib
@@ -51,7 +50,7 @@ namespace mylib
 		{
 			std::cout << "Массив не может быть отрицательной длинны, значение взято по модулю, новое значение: ";
 			ABS(Arr1Size);
-			std::cout << Arr1Size;
+			std::cout << Arr1Size << "\n";
 		}
 		
 		float *pArr1 = new (std::nothrow) float[Arr1Size];		// Выделение памяти для массива

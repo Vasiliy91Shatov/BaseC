@@ -14,4 +14,9 @@ int main()
 	mylib::task1();
 	std::cout << "\n";
 
+	// Задание 2:
+	std::cout << "Задание 2:\n";
+	mylib::task2();
+	std::cout << "\n";
+
 }
