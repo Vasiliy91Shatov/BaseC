@@ -7,11 +7,11 @@ namespace mylib
 {
 	void task2()
 	{
-		float num2;								// сравниваемая переменная
+		float num;								// сравниваемая переменная
 		const size_t rend = 10;					// конец диапазона
 		std::cout << "Введите число: ";
-		std::cin >> num2;
-		std::cout << "Число " << num2 << " входит в диапазон с 0, до " << rend << " ? ";
-		std::cout << RANGE(num2, rend);
+		std::cin >> num;
+		std::cout << "Число " << num << " входит в диапазон с 0, до " << rend << " ? ";
+		std::cout << RANGE(num, rend);
 	}
 }
