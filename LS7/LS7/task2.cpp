@@ -1,7 +1,7 @@
 #include <iostream>
 #include <clocale>
 
-// макро-функци€ определ€юща€ входит ли число num в дипазон с 0, до end
+// макро-функци€ определ€юща€ входит ли число num в дипазон от 0 (включительно), до end
 #define RANGE(num , end) ((((num) >= 0) and (num < end)) ? true : false);
  
 namespace mylib
