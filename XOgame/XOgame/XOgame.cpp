@@ -159,7 +159,7 @@ void GameDeInit(XOgame& g)
 }
 
 // Условия победы если выполняеться - возвращает 1
-bool getWin(XOgame& g)
+bool getWin(const XOgame& g)
 {
     //Проверка горизонталей
     for (size_t y = 0; y < FIELDSIZE; y++)
@@ -185,7 +185,7 @@ bool getWin(XOgame& g)
 }
 
 // Условие ничьи если выполняеться - возвращает 1
-bool getNoWin(XOgame& g)        
+bool getNoWin(const XOgame& g)        
 {
     size_t i = 0;     //счетчик
     for (size_t y = 0; y < FIELDSIZE; y++)
